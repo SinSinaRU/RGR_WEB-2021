@@ -38,7 +38,7 @@ export default {
   height: 4vh;
   border-radius: 1vh;
   border: 0vh;
-  box-shadow: inset   0vh 0vh 1vh $shadow-color;
+  box-shadow: inset 0vh 0vh 1vh $shadow-color;
   z-index: 3;
   &:hover{
     background: $button-color-style;

@@ -5,7 +5,7 @@
         NOTDNS
       </h1>
     </a>
-    <a id="menu1" href="#" @click="visible= !visible">
+    <a id="menu1" href="#" @click="visible= !visible" @mouseleave="visible= !visible">
       <h1 class="textmenu">
         Категории товаров
       </h1>

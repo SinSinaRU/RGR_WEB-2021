@@ -14,6 +14,12 @@
   </div>
   <div id="content">
     <v-element-of-shop/>
+    <v-element-of-shop/>
+    <v-element-of-shop/>
+    <v-element-of-shop/>
+    <v-element-of-shop/>
+    <v-element-of-shop/>
+
   <!--  <img data-dummy width="400" height="300" />
     <p>{{dummy_text}}</p>-->
   </div>
