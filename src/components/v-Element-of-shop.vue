@@ -1,7 +1,7 @@
 <template>
   <div id="v-Element-of-shop">
     <div class="element">
-      <img class="img-element" data-dummy width="150" height="150"/>
+      <img class="img-element" :src=img_dummy>
       <a href="#" class="text-element">{{dummy_text}}</a>
       <p class="price-element"> 0 000 ‡</p>
       <button class="add-to-cart-button"> Купить</button>
@@ -16,6 +16,7 @@ export default {
   name: "v-Element-of-shop",
   data(){
     return {
+      img_dummy: Dummy.img(150, 150),
       dummy_text: Dummy.text(20),
       color_of_button: "$blue-color-style"
     }

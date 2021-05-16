@@ -5,12 +5,12 @@
         NOTDNS
       </h1>
     </a>
-    <a id="menu1" href="#" @click="visible= !visible" @mouseleave="visible= !visible">
+    <a id="menu1" href="#" @click="visible= !visible">
       <h1 class="textmenu">
         Категории товаров
       </h1>
       <transition name="fade">
-        <ul id="category" v-show="visible">
+        <ul id="category" v-show="visible" @mouseleave="visible=!visible">
           <a href='#' id="category1">
             <p class="category-text">
               Компьютеры и ноутбуки
