@@ -1,31 +1,38 @@
+<link rel="stylesheet" href="../dist/css/app.5c26c694.css">
 <template>
   <div id="background"></div>
- <vCap />
- <v-index-elements/>
+  <v-header/>
+  <v-index-elements/>
+  <v-footer/>
 </template>
 
 <script>
-import vIndexElements from "./components/v-indexElements.vue"
-import vCap from "./components/v-Cap.vue"
+import vIndexElements from "./components/v-index-elements"
+import vHeader from "./components/v-header"
+import vFooter from "./components/v-footer"
+
 export default {
   name: 'App',
   components: {
-    vCap,
-    vIndexElements
+    vHeader,
+    vIndexElements,
+    vFooter
   }
 }
 
 </script>
 
 <style lang="scss">
+
 #app {
   position: absolute;
-  top:0vh;
+  top: 0vh;
   left: 0vw;
   width: 100vw;
   height: 100vh;
 }
-#background{
+
+#background {
   position: fixed;
   top: 0vh;
   background: $main-back-color;
