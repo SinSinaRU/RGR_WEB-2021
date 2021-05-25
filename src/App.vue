@@ -1,22 +1,38 @@
-<link rel="stylesheet" href="../dist/css/app.5c26c694.css">
 <template>
-  <div id="background"></div>
   <v-header/>
-  <v-index-elements/>
+  <div class="container">
+<!--    <v-element-of-market/>
+    <v-element-of-market/>
+    <v-element-of-market/>
+    <v-element-of-market/>
+    <v-element-of-market/>
+    <v-element-of-market/>
+    <v-element-of-market/>
+    <v-listing/>-->
+    <v-article/>
+  </div>
   <v-footer/>
 </template>
 
 <script>
-import vIndexElements from "./components/v-index-elements"
+import vArticle from './components/v-article'
+/*import vListing from "./components/v-listing"*/
 import vHeader from "./components/v-header"
+/*
+import vElementOfMarket from "./components/v-element-of-market"
+*/
 import vFooter from "./components/v-footer"
+import VArticle from "./components/v-article";
 
 export default {
   name: 'App',
   components: {
+    VArticle,
     vHeader,
-    vIndexElements,
-    vFooter
+  /*  vElementOfMarket,
+    vListing,*/
+    vFooter,
+    vArticle
   }
 }
 
@@ -24,20 +40,4 @@ export default {
 
 <style lang="scss">
 
-#app {
-  position: absolute;
-  top: 0vh;
-  left: 0vw;
-  width: 100vw;
-  height: 100vh;
-}
-
-#background {
-  position: fixed;
-  top: 0vh;
-  background: $main-back-color;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-}
 </style>

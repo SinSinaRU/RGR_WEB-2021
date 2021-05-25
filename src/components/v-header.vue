@@ -1,399 +1,118 @@
 <template>
-  <header class="v-Header">
-    <nav>
-      <a id="logo" href="#">
-        <h1 id="textlogo">
+  <div class="v-header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="padding: 0;">
+      <div class="container">
+        <a href="#" class="navbar-brand text-light bg-primary text-center"
+           style="font-family: 'DNS RotondaC'; line-height: 70px; width: 180px; height: 70px;  padding: 0; font-size: 40px">
           NOTDNS
-        </h1>
-      </a>
-      <div id="menu1" @click="visible= !visible">
-        <h1 class="textmenu">
-          Категории товаров
-        </h1>
-        <transition name="fade">
-          <ul id="category" v-show="visible" @mouseleave="visible=false">
-            <a href='#' id="category1">
-              <p class="category-text">
-                Компьютеры и ноутбуки
-              </p>
-            </a>
-            <a href='#' id="category2">
-              <p class="category-text">
-                Компьютерные комплектующие
-              </p>
-              <ul id="sub-category2">
-                <a href='#' id="sub-category2-1">
-                  <p class="sub-category-text">
-                    Процессоры
-                  </p>
-                </a>
-                <a href="#" id="sub-category2-2">
-                  <p class="sub-category-text">
-                    Материнская плата
-                  </p>
-                </a>
-                <a href="#" id="sub-category2-3">
-                  <p class="sub-category-text">
-                    Оперативная память
-                  </p>
-                </a>
-                <a href="#" id="sub-category2-4">
-                  <p class="sub-category-text">
-                    Видеокарта
-                  </p>
-                </a>
-                <a href="#" id="sub-category2-5">
-                  <p class="sub-category-text">
-                    Корпуса
-                  </p>
-                </a>
-                <a href="#" id="sub-category2-6">
-                  <p class="sub-category-text">
-                    Блоки питания
-                  </p>
-                </a>
-                <a href="#" id="sub-category2-7">
-                  <p class="sub-category-text">
-                    SSD и HDD
-                  </p>
-                  <ul id="sub-sub-category2-7">
-                    <a href="#" id="sub-category2-7-1">
-                      <p class="sub-category-text">
-                        SSD
-                      </p>
-                    </a>
-                    <a href="#" id="sub-category2-7-2">
-                      <p class="sub-category-text">
-                        HDD
-                      </p>
-                    </a>
-                  </ul>
-                </a>
-                <a href="#" id="sub-category2-8">
-                  <p class="sub-category-text">
-                    Охлаждения компьютера
-                  </p>
-                </a>
-                <a href="#" id="sub-category2-9">
-                  <p class="sub-category-text">
-                    Моддинг и обслуживание
-                  </p>
-                </a>
-              </ul>
-            </a>
-            <a href='#' id="category3">
-              <p class="category-text">
-                Компьютерная перефирия
-              </p>
-              <ul id="sub-category3">
-                <a href="#" id="sub-category3-1">
-                  <p class="sub-category-text">
-                    Мониторы
-                  </p>
-                </a>
-                <a href="#" id="sub-category3-2">
-                  <p class="sub-category-text">
-                    Клавиатуры
-                  </p>
-                </a>
-                <a href="#" id="sub-category3-3">
-                  <p class="sub-category-text">
-                    Мыши
-                  </p>
-                </a>
-                <a href="#" id="sub-category3-4">
-                  <p class="sub-category-text">
-                    Коврики для мыши
-                  </p>
-                </a>
-                <a href="#" id="sub-category3-5">
-                  <p class="sub-category-text">
-                    Наушники
-                  </p>
-                </a>
-                <a href="#" id="sub-category3-6">
-                  <p class="sub-category-text">
-                    Веб-камеры
-                  </p>
-                </a>
-                <a href="#" id="sub-category3-7">
-                  <p class="sub-category-text">
-                    Компьютерные кабели и переходники
-                  </p>
-                </a>
-                <a href="#" id="sub-category3-8">
-                  <p class="sub-category-text">
-                    Внешние накопители данных
-                  </p>
-                </a>
-              </ul>
-            </a>
-            <a id="category4">
-              <p class="category-text">
-                Игры и игровые
-                <br/>
-                приставки
-              </p>
-            </a>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto ">
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#menu" aria-controls="menu" role="button">
+                Категории товаров</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Новости и акции</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">О нас</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Обратная связь</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Техническая поддержка</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-center cart">
+                <span class="material-icons">shopping_cart</span>
+              </a>
+            </li>
           </ul>
-        </transition>
+        </div>
+        <div class="offcanvas offcanvas-start" id="menu" aria-labelledby="dropdownMenuLink">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Категории товаров</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+          </div>
+          <ul class="offcanvas-body pt-4 text-center">
+            <li><a class="dropdown-item pt-3 " href="#">Компьютеры и ноутбуки</a></li>
+            <li class="dropdown-item dropdown pt-3">
+              <div class="dropdown-toggle" id="dropdown__first-layout" data-bs-toggle="dropdown" aria-haspopup="false"
+                   aria-expanded="false" role="button">Компьютерные комплектующие
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="dropdown__first-layout">
+                <li><a class="dropdown-item" href="#">Процессоры</a></li>
+                <li><a class="dropdown-item" href="#">Материнские платы</a></li>
+                <li><a class="dropdown-item" href="#">Оперативная память</a></li>
+                <li><a class="dropdown-item" href="#">Видекарты</a></li>
+                <li><a class="dropdown-item" href="#">Корпуса</a></li>
+                <li><a class="dropdown-item" href="#">Блоки питания</a></li>
+                <li><a class="dropdown-item" href="#">SSD и HDD</a></li>
+                <li><a class="dropdown-item" href="#">Охлаждение компьютера</a></li>
+                <li><a class="dropdown-item" href="#">Моддинг и обслуживание</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-item dropdown pt-3">
+              <div class="dropdown-toggle" id="dropdown__second-layout" data-bs-toggle="dropdown" aria-haspopup="false"
+                   aria-expanded="false" role="button">Компьютерная перефирия
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="dropdown__second-layout">
+                <li><a class="dropdown-item" href="#">Мониторы</a></li>
+                <li><a class="dropdown-item" href="#">Клавиатуры</a></li>
+                <li><a class="dropdown-item" href="#">Мыши</a></li>
+                <li><a class="dropdown-item" href="#">Коврики для мыши</a></li>
+                <li><a class="dropdown-item" href="#">Наушники</a></li>
+                <li><a class="dropdown-item" href="#">Веб-камеры</a></li>
+                <li><a class="dropdown-item" href="#">Компьютерные кабели и переходники</a></li>
+                <li><a class="dropdown-item" href="#">Внешние накопители данных</a></li>
+              </ul>
+            </li>
+            <li><a class="dropdown-item pt-3" href="#">Игры и игровые приставки</a></li>
+            </ul>
+        </div>
       </div>
-      <a href="#" id="menu2">
-        <h1 class="textmenu">
-          Новости и акции
-        </h1>
-      </a>
-      <a href="#" id="menu3">
-        <h1 class="textmenu">
-          Обратная связь
-        </h1>
-      </a>
-      <a href="#" id="menu4">
-        <h1 class="textmenu">
-          Корзина
-        </h1>
-      </a>
-      <a href="#" id="menu5">
-        <h1 class="textmenu">
-          Техническая поддержка
-        </h1>
-      </a>
     </nav>
-  </header>
+  </div>
 </template>
 
 <script>
-
 export default {
-  name: "v-Header",
-  data() {
-    return {
-      visible: false
-    }
-  }
+  name: "v-header"
 }
-
 </script>
 
 <style lang="scss">
-
-.v-Header {
-  z-index: 1000;
-  position: fixed;
-  font-family: 'DNSRotondaC';
-  height: 6vh;
-  box-shadow: 0 1.3vh 1vh -1vh $shadow-color;
-  background: $main-color;
-  width: 100vw;
+.v-header{
+  border-bottom: 1px solid $gray-400;
+}
+.nav-item {
+  padding: 0 0 5px 15px;
 }
 
-#menu1, #menu2, #menu3, #menu4, #menu5, #menu6, #logo {
-  position: absolute;
-  color: $main-color;
-  text-align: center;
-  width: 12vw;
-  height: 6vh;
-  margin-left: 2vw;
-  box-sizing: border-box;
+
+.cart {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: $blue;
+
+  span {
+    padding: 1px;
+  }
+
   &:hover {
-    border-bottom: 0.5vh solid $blue-color-style;
-  }
-}
-#logo {
-  background: $blue-color-style;
-}
-
-@for $i from 1 to 5 {
-  #category#{$i} {
-    position: absolute;
-    background: $blue-color-style;
-    left: 0;
-    top: $i*6vh;
-    height: 6vh;
-    width: 12vw;
-    text-align: center;
-    box-shadow: -0.1vh -0.3vh 0.6vh $shadow-color;
-    @if ($i==4) {
-      border-radius: 0 0 1.3vh 1.3vh;
-    }
-    @if ($i==2) {
-      &:hover > #sub-category2 {
-        visibility: visible;
-        opacity: 1;
-        transition: .4s linear;
-      }
-    }
-    @if ($i==3) {
-      &:hover > #sub-category3 {
-        visibility: visible;
-        opacity: 1;
-        transition: .4s linear;
-      }
-    }
-
-    @if (($i==1) or ($i==3)) {
-      & p {
-        position: relative;
-        top: 0;
-      }
-    }
-
-    &:hover {
-      box-shadow: inset 0.3vh 0.8vh 2vh 0.2vh $menu-inside-shadow;
-    }
+    box-shadow: 0 0 10px $shadow-color;
   }
 }
 
-@for $i from 1 to 3 {
-  #sub-category2-7-#{$i} {
-    position: absolute;
-    background: $blue-color-style;
-    left: 12vw;
-    top: $i*6vh-6vh;
-    height: 6vh;
-    width: 12vw;
-    text-align: center;
-    box-shadow: -0.1vh -0.3vh 0.6vh $shadow-color;
+a {
+  cursor: pointer;
 
-    &:hover {
-      box-shadow: inset 0.3vh 0.8vh 2vh 0.2vh $menu-inside-shadow;
-    }
-
-    @if ($i==2) {
-      border-radius: 0 0 1.3vh 0;
-    }
-    @if ($i==1) {
-      border-radius: 0 1.3vh 0 0;
-    }
-  }
-}
-
-@for $i from 1 to 10 {
-  #sub-category2-#{$i} {
-    position: absolute;
-    background: $blue-color-style;
-    left: 12vw;
-    top: $i*6vh-6vh;
-    height: 6vh;
-    width: 12vw;
-    text-align: center;
-    box-shadow: -0.1vh -0.3vh 0.6vh $shadow-color;
-
-    &:hover {
-      box-shadow: inset 0.3vh 0.8vh 2vh 0.2vh $menu-inside-shadow;
-    }
-
-    @if ($i==9) {
-      border-radius: 0 0 1.3vh 1.3vh;
-    }
-    @if ($i==1) {
-      border-radius: 0 1.3vh 0 0;
-    }
-    @if ($i<8) {
-      & p {
-        position: relative;
-        top: -0.7vh;
-      }
-    }
-    @if ($i==7) {
-      &:hover > #sub-sub-category2-7 {
-        visibility: visible;
-        opacity: 1;
-        transition: .4s linear;
-      }
-    }
-  }
-}
-
-@for $i from 1 to 9 {
-  #sub-category3-#{$i} {
-    position: absolute;
-    background: $blue-color-style;
-    left: 12vw;
-    top: $i*6vh-6vh;
-    height: 6vh;
-    width: 12vw;
-    text-align: center;
-    box-shadow: -0.1vh -0.3vh 0.6vh $shadow-color;
-
-    &:hover {
-      box-shadow: inset 0.3vh 0.8vh 2vh 0.2vh $menu-inside-shadow;
-    }
-
-    @if ($i==8) {
-      border-radius: 0 0 1.3vh 1.3vh;
-    }
-    @if ($i==1) {
-      border-radius: 0 1.3vh 0 0;
-    }
-    @if ($i==7) {
-      & p {
-        position: relative;
-        top: -1vh;
-      }
-    }
-
-  }
-}
-
-@for $i from 1 to 6 {
-  #menu#{$i} {
-    margin-left: $i*4vw+2vw;
-    left: $i*12vw;
-    box-shadow: 0 -0.5vh 1vh $shadow-color;
-    @if ($i==1){}
-    cursor: pointer;
-  }
-}
-
-
-#textlogo {
-  letter-spacing: 0.4vh;
-  position: relative;
-  top: -2vh;
-  font-size: 2vw;
-  text-shadow: 0.4vh 0.4vh 1.3vh $add-color;
-}
-
-#sub-category3, #sub-sub-category2-7, #sub-category2 {
-  visibility: hidden;
-  opacity: 0;
-  transition: .4s ease-in-out;
-}
-
-// ДЛЯ ТЕКСТА
-.textmenu {
-  position: relative;
-  top: 0.35vh;
-  font-size: 1vw;
-  color: $font-color;
-}
-
-.category-text {
-  position: relative;
-  top: -1vh;
-  font-size: 0.9vw;
-  text-align: center;
-  color: $main-color;
-}
-
-.sub-category-text {
-  position: relative;
-  font-size: 0.9vw;
-  text-align: center;
-  color: $main-color;
-}
-
-.fade-enter-to {
-  transition: .4s linear;
-  opacity: 1;
-}
-
-.fade-leave-active {
-  transition: all .4s ease-in-out;
-}
-
-.fade-enter-from, .fade-leave-to {
-  opacity: 0;
 }
 </style>

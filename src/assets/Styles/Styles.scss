@@ -1,16 +1,59 @@
 @import "Variables.scss";
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import '~material-design-icons/iconfont/material-icons.css';
 
-@font-face {font-family: "DNSRotondaC"; src: url("https://db.onlinewebfonts.com/t/09f4991737eeaec48da2d248cef1e505.eot");
+@font-face {
+  font-family: "DNSRotondaC";
+  src: url("https://db.onlinewebfonts.com/t/09f4991737eeaec48da2d248cef1e505.eot");
   src: url("https://db.onlinewebfonts.com/t/09f4991737eeaec48da2d248cef1e505.eot?#iefix") format("embedded-opentype"),
   url("https://db.onlinewebfonts.com/t/09f4991737eeaec48da2d248cef1e505.woff2") format("woff2"),
   url("https://db.onlinewebfonts.com/t/09f4991737eeaec48da2d248cef1e505.woff") format("woff"),
   url("https://db.onlinewebfonts.com/t/09f4991737eeaec48da2d248cef1e505.ttf") format("truetype"),
-  url("https://db.onlinewebfonts.com/t/09f4991737eeaec48da2d248cef1e505.svg#DNS RotondaC") format("svg"); }
+  url("https://db.onlinewebfonts.com/t/09f4991737eeaec48da2d248cef1e505.svg#DNS RotondaC") format("svg");
+}
+
+@font-face {
+  font-family: "DNS RotondaC";
+  src: url("//db.onlinewebfonts.com/t/431bf89c81e201b6cbbc02dd9b186de1.eot");
+  src: url("//db.onlinewebfonts.com/t/431bf89c81e201b6cbbc02dd9b186de1.eot?#iefix") format("embedded-opentype"),
+  url("//db.onlinewebfonts.com/t/431bf89c81e201b6cbbc02dd9b186de1.woff2") format("woff2"),
+  url("//db.onlinewebfonts.com/t/431bf89c81e201b6cbbc02dd9b186de1.woff") format("woff"),
+  url("//db.onlinewebfonts.com/t/431bf89c81e201b6cbbc02dd9b186de1.ttf") format("truetype"),
+  url("//db.onlinewebfonts.com/t/431bf89c81e201b6cbbc02dd9b186de1.svg#DNS RotondaC") format("svg");
+}
+
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
 
 a {
   text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
+li {
+  list-style: none;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'DNSRotondaC';
+  background: $main-back-color;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/*
 #content {
   display: flex;
   flex-wrap: wrap;
@@ -20,4 +63,4 @@ a {
   margin-left: 20vw;
   margin-right: 20vw;
   width: 60vw;
-}
+}*/
